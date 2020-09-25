@@ -20,12 +20,11 @@ load_rc_config $name
 
 : ${calibre_web_enable:=NO}
 : ${calibre_web_user:=calibreweb}
-: ${calibre_web_dbpath:=/usr/local/etc/calibre-web}
+: ${calibre_web_dbpath:=/usr/local/etc/calibre-web/}
 : ${calibre_web_logfile:=/var/log/calibre-web/calibre-web.log}
 
 pidfile="/var/run/${name}/${name}.pid"
 
-#shebang error?
 command="env CALIBRE_DBPATH=${calibre_web_dbpath} python3 /usr/local/app/calibre-web/cps.py"
 #command_args ???
 #required_dirs="${calibre_web_dbpath}"
